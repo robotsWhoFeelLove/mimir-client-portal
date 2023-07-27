@@ -9,14 +9,7 @@
   body{
     background-color: #CCCCCC;
   }
-  /* #root{
-    width: 100vw;
-    margin-left: 0;
-  }
-  nav{
-    width: 100vw;
-    left: 0;
-  } */
+
 
   .questions{
     background-image: url("./assets/stock-background.png")

@@ -2,8 +2,6 @@ import '@fontsource/noto-sans';
 import { useState, useEffect } from 'react'
 // import reactLogo from './assets/react.svg'
 import {Routes,Route, useParams} from 'react-router-dom';
-import Header from "./Header"
-import Header2 from "./Headerr2"
 import qwa from "../assets/QWA_Logo_Full_Color.svg"
 // import viteLogo from '/vite.svg'
 import Banner from './Banner';
@@ -113,8 +111,7 @@ console.log({fetchString2})
         <div className="z-01">
   
             {results.questions ? results.questions.map((question,index)=> {
-              // questions.push(question);
-              // console.log({questions});
+   
           return (<>
               <div className='questions lg:w-screen∂ bg-fixed h-screen sticky top-0 grid self-center'>
                 <Question
