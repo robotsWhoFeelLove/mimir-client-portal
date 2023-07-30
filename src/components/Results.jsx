@@ -36,10 +36,10 @@ export default function Results() {
   
 
   const fetchString2 = `${import.meta.env.VITE_API_URL}api/survey/${cid}/${type}/${aud}`
-console.log({fetchString2})
+window.console.log({fetchString2})
   // console.log(this.props.match.params.clientID)
   const fetchString = `${import.meta.env.VITE_API_URL}api/results/${cid}`
-  console.log({fetchString})
+  window.console.log({fetchString})
 
   function handleClick(e){
     console.log(e.target)
@@ -47,7 +47,7 @@ console.log({fetchString2})
     // setQuestions(resultsCopy)
     let index = resultsCopy.findIndex((el)=> el._id === e.target.name )
     resultsCopy[index].score = Number(e.target.value)
-    console.log({resultsCopy})
+    window.console.log({resultsCopy})
     setQuestions(resultsCopy)
     // console.log({results})
     return resultsCopy
@@ -64,7 +64,7 @@ console.log({fetchString2})
       },
       body: JSON.stringify({questions: questionClone})
     }
-    console.log({requestOptions})
+    window.console.log({requestOptions})
     
     fetch(fetchString2,requestOptions)
       .then(response=> response.json())
@@ -86,8 +86,9 @@ console.log({fetchString2})
         return response.json()
       })
       .then(results=> {
+        
         setResults(results)
-  
+        window.console.log({results})
       })
       .then(()=>{
 
