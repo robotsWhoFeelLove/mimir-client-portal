@@ -13,6 +13,7 @@ import circuit from "../assets/abstract_background_with_modern_hexagonal_tech_de
 import { Link, useNavigate, Navigate } from 'react-router-dom';
 import Welcome from './Welcome';
 import Results from './Results';
+import { Engagement } from './Engagement';
 
 // import './App.css'
 
@@ -33,6 +34,7 @@ return(<>
   <Routes>
    <Route path="/" element={<Welcome />}  />
    <Route path="/results" element={<Results />}  />
+   <Route path="/:eid" element={<Engagement />} />
 </Routes>
   </>)
 }
