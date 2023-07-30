@@ -1,6 +1,38 @@
+/* html {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.section1,.section2{
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+}/*
+
+.section1:before{
+  content:"";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("./assets/abstract_background_with_modern_hexagonal_tech_design_2801.jpg") top center;
+  background-size: cover;
+  transform: translateZ(-1px) scale(2.2);
+ 
+} 
+
 .question{
     font-family: 'Gibson','Noto Sans', sans-serif;
-  }
+  } 
 
   #root{
     padding: 0;
@@ -8,12 +40,64 @@
 
   body{
     background-color: #CCCCCC;
+  }*/
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .parallax {
+    perspective: 1px;
+    height: 100vh;
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .parallax__img {
+    width: 100vw;
+    height: 100vh;
+  }
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 2000px;
+  }
+  .parallax__layer_1 {
+    transform: translateZ(-1px) scale(2);
+    /* height:300vh; */
+    background-image: url("./assets/abstract_background_with_modern_hexagonal_tech_design_2801.jpg");
+    background-repeat: repeat-y;
+   
+  }
+  .parallax__layer_6 {
+    transform: translateZ(-11px) scale(2);
+    height:100vh;
+  }
+  .parallax__layer_12 {
+    transform: translateZ(-25px) scale(3);
+    height:100vh;
+  }
+  .parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
   }
 
 
-  .questions{
-    background-image: url("./assets/stock-background.png")
-  }
+
+
+
+  .question{
+    transform: translateZ(20px);
+    transform-style: preserve-3d;
+    font-family: 'Gibson','Noto Sans', sans-serif;
+
+   
+  } 
 
 
 
